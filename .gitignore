@@ -1,1 +1,12 @@
+# Output files
+*.png
+
+# Python runtime
+*.pyc
+*.egg-info
+.pytest_cache
 .ipynb_checkpoints
+
+# Virtual environments
+venv/
+.venv/
