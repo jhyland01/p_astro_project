@@ -11,7 +11,7 @@ logger.setLevel('WARNING')
 bilby.core.utils.log.setup_logger(log_level=0)
 
 # import the samples
-samples = pd.read_csv('params_for_SNR.csv', index_col=0)
+samples = pd.read_csv('../outputs/params_for_SNR.csv', index_col=0)
 # create detector frame masses
 samples = samples.assign(mass_1_det = samples['mass_1']*(1+samples['redshift']))
 samples = samples.assign(mass_2_det = samples['mass_2']*(1+samples['redshift']))
@@ -127,4 +127,4 @@ samples['net_snr'] = np.sqrt(samples['H1_snr']**2 + samples['L1_snr']**2 +sample
 
 # adding on the quick conversion to FARs here
 samples['FAR'] = SNR_to_FAR(samples['net_snr'])
-samples.to_csv('params_inc_FAR.csv')
+samples.to_csv('../outputs/params_inc_FAR.csv')

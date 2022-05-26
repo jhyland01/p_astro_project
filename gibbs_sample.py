@@ -138,4 +138,4 @@ samples = samples.assign(spin2z = samples['a_2']*samples['cos_tilt_2'])
 samples = samples.assign(spin1x = samples['a_1']*samples['sin_tilt_1'])
 samples = samples.assign(spin2x = samples['a_2']*samples['sin_tilt_2'])
 
-samples.to_csv('params_for_SNR.csv')
+samples.to_csv('../outputs/params_for_SNR.csv')

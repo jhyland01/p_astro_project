@@ -12,5 +12,7 @@
 venv/
 .venv/
 
-# old versions
+# old versions and outputs and figures
 old_notebooks/
+figures/
+outputs/
