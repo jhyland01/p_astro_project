@@ -1,5 +1,6 @@
 # Output files
 *.png
+*.csv
 
 # Python runtime
 *.pyc
@@ -10,3 +11,6 @@
 # Virtual environments
 venv/
 .venv/
+
+# old versions
+old_notebooks/

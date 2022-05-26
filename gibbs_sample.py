@@ -123,7 +123,7 @@ samples = samples.assign(mass_ratio = q_sample[1:],
 print(samples)
 
 # have a check to see if there are any NaNs in the sampled dataframe, True if there are
-samples.isnull().values.any()
+print('Check for NaNs:' + str(samples.isnull().values.any))
 
 # save down the samples
 samples = samples.assign(mass_2 = samples['mass_1']*samples['mass_ratio'])

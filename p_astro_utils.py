@@ -9,7 +9,7 @@ def cdf(pdf):
     :param prob_dist: The probability distribution of interest.
     :returns: The normalised cumulative distribution of the input probability distribution.
     """
-    if isinstance(pdf, pd.Series) == True:
+    if isinstance(pdf, pd.Series):
         pdf = pdf.to_numpy()
     cdf = np.cumsum(pdf).to_numpy() # sum all the probabilities
     cdf = (cdf - cdf[0]) # subtract the first value so we start from zero
@@ -18,22 +18,24 @@ def cdf(pdf):
 
 
 def cdf_samp(pdf, param):
-    # create and normalise the cdf
-    if isinstance(pdf, pd.Series) == True:
+    """create and normalise the cdf and return a sample from it."""
+    if isinstance(pdf, pd.Series):
         pdf = pdf.to_numpy()
     cdf = np.cumsum(pdf)
     cdf = (cdf - cdf[0])
     cdf /= cdf[-1]
-    # now we take a sample from the cdf
-    samp = np.interp(np.random.random(), cdf, param)
-    return samp
+    return np.interp(np.random.random(), cdf, param)
 
 
 # create functions converting spins
 def chi_eff(a1, a2, cos_theta1, cos_theta2, q):
-    chi = (a1*cos_theta1 + q*a2*cos_theta2)/(1+q)
-    return chi
+    return (a1*cos_theta1 + q*a2*cos_theta2)/(1+q)
 
 def chi_p(a1, a2, sin_theta1, sin_theta2, q):
-    chi = np.maximum(a1*sin_theta1, (4*q+3)*q*a2*sin_theta2/(4+3*q))
-    return chi
+    return np.maximum(a1*sin_theta1, (4*q+3)*q*a2*sin_theta2/(4+3*q))
+
+
+# write the FAR conversion as a function
+def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
+    """Calculate the FAR using the parameterisations from the Lynch paper"""
+    return FAR8*np.exp(-(snr-8)/alpha)
