@@ -21,8 +21,20 @@ From the command line (or otherwise) run:
 ## Dependencies
 
 See requirements.txt for a full list of environment packages.
-This does not include the packages required for using the mpl_utils.py which originates from the GWTC-3 data release and required packages in the LVK igwn environemtns.
+This does not include the packages required for using the mpl_utils.py which originates from the GWTC-3 data release and required packages in the LVK igwn environments.
+
+## Future work
+
+Predicted detection rates for future detectors (Advanced LIGO +/#, Einstein Telescope etc.)
 
 ## Contact information
 
 Email: j.hyland.2@research.gla.ac.uk
+
+## Citations
+
+1. GWTC-3 catalog
+2. GWTC-3 Population paper
+3. Lynch et al.
+
+to be updated
