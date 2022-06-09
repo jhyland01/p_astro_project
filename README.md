@@ -2,6 +2,11 @@
 
 Exploring the effect of using the probability of astrophysical origin as a thresholding statistic on the expected rate of detections and their purity.
 
+## Installation instructions
+
+Clone the project and navigate to the root of the project directory.
+Run "pip3 install ." .
+
 ## Main Features
 
 The scripts in this package are built to select a set of hyperposterior samples from the GWTC-3 data release and Gibbs sample posterior samples from this set of hyperposteriors.

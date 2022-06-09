@@ -5,13 +5,13 @@ import pandas as pd
 
 
 def cdf(pdf):
-    """Compute the normalised CDF of the probabilioty distribution x.
+    """Compute the normalised CDF of the probability distribution x.
     :param prob_dist: The probability distribution of interest.
     :returns: The normalised cumulative distribution of the input probability distribution.
     """
     if isinstance(pdf, pd.Series):
         pdf = pdf.to_numpy()
-    cdf = np.cumsum(pdf).to_numpy() # sum all the probabilities
+    cdf = np.cumsum(pdf) # sum all the probabilities
     cdf = (cdf - cdf[0]) # subtract the first value so we start from zero
     cdf /= cdf[-1] # divide by the last value to normalise to 1
     return cdf

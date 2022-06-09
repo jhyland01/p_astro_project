@@ -62,7 +62,7 @@ for i in range(0,N,1):
     trigger_time=injection_dict['geocent_time'] #- duration
     
     # Sometimes the duration above 20Hz (or chosen frequency) is zero. In these cases I set the SNR to none.
-    if duration is 0:
+    if duration == 0:
         H1_snr[i] = L1_snr[i] = V1_snr[i] = None
 
     else:
