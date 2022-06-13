@@ -4,13 +4,21 @@ import numpy as np
 import pandas as pd
 
 
+def convert(pdf):
+    """Ensure formatting of the input pdf for use in the cdf functions.
+    :param prob_dist: The probability distribution of interest.
+    :returns: The pdf converted to numpy.
+    """
+    if isinstance(pdf, (pd.Series, pd.DataFrame)):
+        pdf = pdf.to_numpy()
+    return pdf
+
 def cdf(pdf):
     """Compute the normalised CDF of the probability distribution x.
     :param prob_dist: The probability distribution of interest.
     :returns: The normalised cumulative distribution of the input probability distribution.
     """
-    if isinstance(pdf, pd.Series):
-        pdf = pdf.to_numpy()
+    pdf = convert(pdf)
     cdf = np.cumsum(pdf) # sum all the probabilities
     cdf = (cdf - cdf[0]) # subtract the first value so we start from zero
     cdf /= cdf[-1] # divide by the last value to normalise to 1
@@ -19,12 +27,8 @@ def cdf(pdf):
 
 def cdf_samp(pdf, param):
     """create and normalise the cdf and return a sample from it."""
-    if isinstance(pdf, pd.Series):
-        pdf = pdf.to_numpy()
-    cdf = np.cumsum(pdf)
-    cdf = (cdf - cdf[0])
-    cdf /= cdf[-1]
-    return np.interp(np.random.random(), cdf, param)
+    CDF = cdf(pdf)
+    return np.interp(np.random.random(), CDF, param)
 
 
 # create functions converting spins
