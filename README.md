@@ -1,3 +1,5 @@
+[![CI](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml/badge.svg)](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml)
+
 # P_astro Project
 
 Exploring the effect of using the probability of astrophysical origin as a thresholding statistic on the expected rate of detections and their purity.
