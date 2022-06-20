@@ -10,24 +10,24 @@ jobs:
 
     runs-on: ${{ matrix.os }}
     strategy:
-      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.8", "3.9"]
 
     steps:
     - name: Checkout repository
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+    - name: Set up Python
+      uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+    - name: Install Python dependencies
       run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        python3 -m pip install --upgrade pip
+        python3 -m pip install flake8 pytest
+        pip3 install -r requirements.txt
+        pip3 install -e .
     - name: Lint with flake8
       run: |
         # stop the build if there are Python syntax errors or undefined names
@@ -36,7 +36,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with PyTest
       run: |
-        pytest --cov-report=xml tests/test_p_astro_utils.py
+        pytest --cov=analysis --cov-report=xml tests/test_p_astro_utils.py
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3.1.0
       with:
