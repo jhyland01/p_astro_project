@@ -22,7 +22,8 @@ for j in range(0,len(PP_params)-1):
 
   base_mass.parameters = base_spin_mag.parameters  = base_spin_ori.parameters = z_model.parameters = PP_params[j]
 
-  nsamps = 1000
+  # we end up discarding the first two samples so set nsamps to n+2 of what you want
+  nsamps = 1002
   m1_sample = np.zeros(nsamps)
   q_sample = np.zeros(nsamps)
   a_1_sample = np.zeros(nsamps)
