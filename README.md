@@ -1,4 +1,5 @@
 [![CI](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml/badge.svg)](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml) [![codecov](https://codecov.io/gh/jhyland01/p_astro_project/branch/master/graph/badge.svg?token=L4NSGM7TN6)](https://codecov.io/gh/jhyland01/p_astro_project)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjhyland01%2Fp_astro_project.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjhyland01%2Fp_astro_project?ref=badge_shield)
 
 # P_astro Project
 
@@ -42,3 +43,6 @@ Email: j.hyland.2@research.gla.ac.uk
 3. Lynch et al.
 
 to be updated
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fjhyland01%2Fp_astro_project.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fjhyland01%2Fp_astro_project?ref=badge_large)
