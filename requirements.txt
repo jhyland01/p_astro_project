@@ -3,4 +3,3 @@ matplotlib
 gwpopulation
 pandas
 numpy
-sqlite3
