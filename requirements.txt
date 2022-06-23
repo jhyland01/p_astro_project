@@ -309,7 +309,6 @@ requests-mock==1.9.3
 requests-toolbelt==0.9.1
 rfc3986==1.4.0
 RIFT==0.0.15.5
-root-numpy==4.8.0
 ruamel.yaml==0.16.12
 ruamel.yaml.clib==0.2.6
 safe-netrc==1.0.0
