@@ -3,3 +3,4 @@ matplotlib
 gwpopulation
 pandas
 numpy
+pytest
