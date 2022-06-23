@@ -35,4 +35,4 @@ jobs:
         pip3 install -e .
     - name: Test with PyTest
       run: |
-        pytest --cov=analysis.p_astro_utils tests/test_p_astro_utils.py
+        pytest --cov=p_astro_utils tests/test_p_astro_utils.py
