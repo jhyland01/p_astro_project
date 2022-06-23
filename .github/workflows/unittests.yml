@@ -49,6 +49,7 @@ jobs:
     #     path_to_write_report: ./coverage/codecov_report.txt
     #     verbose: true
     - name: Upload coverage to Codecov
+      if: always()
       run: |
         # Replace `linux` below with the appropriate OS
         # Options are `alpine`, `linux`, `macos`, `windows`

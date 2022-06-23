@@ -34,5 +34,6 @@ jobs:
         pip install -r requirements.txt
         pip install -e .
     - name: Test with PyTest
+      if: always()
       run: |
         pytest --cov=analysis tests/test_p_astro_utils.py
