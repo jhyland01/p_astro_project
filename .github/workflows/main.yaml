@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest]
-        python-version: [3.9.10]
+        python-version: [3.9]
 
     # a job is a seq of steps
     steps:
@@ -35,4 +35,4 @@ jobs:
         pip3 install -e .
     - name: Test with PyTest
       run: |
-        pytest --cov=analysis tests/test_p_astro_utils.py
+        pytest --cov=analysis.p_astro_utils tests/test_p_astro_utils.py
