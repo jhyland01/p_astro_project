@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with PyTest
       run: |
-        pytest --cov=analysis.p_astro_utils tests/test_p_astro_utils.py
+        python -m pytest --cov-report=xml --without-integration --without-slow-integration
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v3.1.0
     #   with:
@@ -50,10 +50,15 @@ jobs:
     #     name: codecov-umbrella
     #     path_to_write_report: ./coverage/codecov_report.txt
     #     verbose: true
-    - name: Upload coverage to Codecov
-      run: |
-        # Replace `linux` below with the appropriate OS
-        # Options are `alpine`, `linux`, `macos`, `windows`
-        curl -Os https://uploader.codecov.io/latest/macos/codecov
-        chmod +x codecov
-        ./codecov -t ${CODECOV_TOKEN}
+    - name: Upload coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        flags: unittests
+    # - name: Upload coverage to Codecov
+    #   run: |
+    #     # Replace `linux` below with the appropriate OS
+    #     # Options are `alpine`, `linux`, `macos`, `windows`
+    #     curl -Os https://uploader.codecov.io/latest/macos/codecov
+    #     chmod +x codecov
+    #     ./codecov -t ${CODECOV_TOKEN}
