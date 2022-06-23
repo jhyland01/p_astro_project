@@ -1,3 +1,5 @@
+"""This script was produced by the LVK and it used for formating plots."""
+
 from warnings import warn
 from cycler import cycler
 import matplotlib as mpl

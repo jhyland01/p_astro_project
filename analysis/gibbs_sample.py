@@ -5,12 +5,19 @@ import numpy as np
 import pandas as pd
 from p_astro_utils import cdf_samp, chi_eff, chi_p
 from bilby.hyper.model import Model
-from select_hyperposterior import PP_params
+from analysis import select_hyperposterior
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('nsets', help='number of hyperposterior sets to sample from', type=int)
+cli_args = parser.parse_args()
+
+PP_params = select_hyperposterior.select_hyper(cli_args.nsets)
 
 # initiate a list to hold the dataframes of each set of samples from each set of hyperparameters
 df_list = []
 
-for j in range(0,len(PP_params)-1):
+for j in range(0,len(PP_params)):
   # first obtain PP_params by running the select_hyperposterior.py script
 
   base_mass = gwpop.models.mass.SinglePeakSmoothedMassDistribution(mmin = PP_params[j]['mmin'],
@@ -22,8 +29,8 @@ for j in range(0,len(PP_params)-1):
 
   base_mass.parameters = base_spin_mag.parameters  = base_spin_ori.parameters = z_model.parameters = PP_params[j]
 
-  # we end up discarding the first two samples so set nsamps to n+2 of what you want
-  nsamps = 1002
+  # we end up discarding the first sample so set nsamps to n+1 of what you want
+  nsamps = 1001
   m1_sample = np.zeros(nsamps)
   q_sample = np.zeros(nsamps)
   a_1_sample = np.zeros(nsamps)
@@ -144,5 +151,8 @@ samples = samples.assign(spin1z = samples['a_1']*samples['cos_tilt_1'])
 samples = samples.assign(spin2z = samples['a_2']*samples['cos_tilt_2'])
 samples = samples.assign(spin1x = samples['a_1']*samples['sin_tilt_1'])
 samples = samples.assign(spin2x = samples['a_2']*samples['sin_tilt_2'])
+
+# after concatenating the dataframes we have duplicate indices, so we need to reindex
+samples.reindex()
 
 samples.to_csv('../outputs/params_for_SNR.csv')

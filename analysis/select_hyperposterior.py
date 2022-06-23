@@ -5,7 +5,7 @@ from bilby.core.result import read_in_result
 import numpy as np
 import gwpopulation as gwpop
 
-def select_hyper(nsets):
+def select_hyper(nsets=20):
     # read in all the hyperposterior samples
     PP_path = '../../GWTC-3-population-data/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json'
     PP_result = read_in_result(PP_path)
@@ -36,6 +36,3 @@ def select_hyper(nsets):
         PP_params.append(new_hyper)
 
     return PP_params
-
-# now run this for 20 sets of hyperparamaters
-PP_params = select_hyper(20)

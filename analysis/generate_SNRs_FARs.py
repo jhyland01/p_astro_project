@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import bilby
 import bilby.gw.utils as ut
-from p_astro_utils import SNR_to_FAR
+from analysis import p_astro_utils
 logger = bilby.core.utils.logger
 logger.setLevel('WARNING')
 bilby.core.utils.log.setup_logger(log_level=0)
@@ -126,5 +126,5 @@ samples['net_snr'] = np.sqrt(samples['H1_snr']**2 + samples['L1_snr']**2 +sample
 # samples.to_csv('params_inc_SNR.csv')
 
 # adding on the quick conversion to FARs here
-samples['FAR'] = SNR_to_FAR(samples['net_snr'])
+samples['FAR'] = p_astro_utils.SNR_to_FAR(samples['net_snr'])
 samples.to_csv('../outputs/params_inc_FAR.csv')

@@ -22,7 +22,7 @@ backports.functools-lru-cache @ file:///home/conda/feedstock_root/build_artifact
 BayesWaveUtils @ file:///home/conda/feedstock_root/build_artifacts/bayeswave_1637757343059/work/BayesWaveUtils
 bcrypt @ file:///home/conda/feedstock_root/build_artifacts/bcrypt_1636021274623/work
 beautifulsoup4 @ file:///home/conda/feedstock_root/build_artifacts/beautifulsoup4_1631087867185/work
-bilby @ file:///home/conda/feedstock_root/build_artifacts/bilby_1620746139498/work
+bilby==1.1.5
 bilby-pipe @ file:///home/conda/feedstock_root/build_artifacts/bilby_pipe_1621266950441/work
 billiard @ file:///home/conda/feedstock_root/build_artifacts/billiard_1636131239898/work
 black @ file:///home/conda/feedstock_root/build_artifacts/black-recipe_1622561163993/work
@@ -88,6 +88,7 @@ dqsegdb @ file:///home/conda/feedstock_root/build_artifacts/dqsegdb_164338919849
 dqsegdb2==1.0.1
 dttxml @ file:///home/conda/feedstock_root/build_artifacts/dttxml_1632991913882/work
 dynesty==1.0.1
+e==1.4.5
 emcee==0.0.0
 entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1643888246732/work
 ephem @ file:///home/conda/feedstock_root/build_artifacts/ephem_1645531335805/work
