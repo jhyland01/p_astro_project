@@ -169,7 +169,6 @@ kombu==5.2.4
 lalsuite==7.3
 lark-parser==0.12.0
 lazy-object-proxy==1.6.0
-libstempo==2.4.4
 ligo-asimov==0.3.2
 ligo-common==1.0.4
 ligo.em-bright==0.1.6
