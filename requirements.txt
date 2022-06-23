@@ -164,8 +164,8 @@ jupyterlab-widgets==1.0.0
 kafka-python==2.0.2
 keyring==23.4.0
 kiwisolver==1.4.2
-kombu==5.2.4
 ligo-common==1.0.4
+kombu==5.2.4
 ligo.em-bright==0.1.6
 ligo-followup-advocate==1.1.9
 ligo-gracedb==2.7.6
