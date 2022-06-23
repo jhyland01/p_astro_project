@@ -19,7 +19,6 @@ awkward0==0.15.5
 Babel==2.10.1
 backcall==0.2.0
 backports.functools-lru-cache==1.6.4
-BayesWaveUtils==0.1.dev0
 bcrypt==3.2.0
 beautifulsoup4==4.10.0
 bilby==1.1.5
