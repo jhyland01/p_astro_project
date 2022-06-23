@@ -30,8 +30,8 @@ jobs:
 
     - name: Install Python dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip3 install -r requirements.txt
+        conda create --name igwn --file requirements.txt
+        conda activate igwn
         pip3 install -e .
     - name: Test with PyTest
       run: |
