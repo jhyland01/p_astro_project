@@ -255,7 +255,7 @@ pycparser==2.21
 pydotplus==2.0.2
 pyepics==3.5.0
 pyerfa==2.0.0
-pyfd==4.5.6
+pyfd
 pyFFTW==0.13.0
 pyflakes==2.4.0
 pygcn==1.0.2
