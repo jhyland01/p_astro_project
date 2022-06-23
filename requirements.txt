@@ -68,7 +68,6 @@ cryptography==3.3.1
 cssselect2==0.2.1
 cycler==0.11.0
 Cython==0.29.28
-dataclasses==0.8
 dbus-python==1.2.16
 dcc==0.8.0
 debugpy==1.5.1
