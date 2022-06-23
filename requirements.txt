@@ -290,7 +290,6 @@ pytest-timeout
 pytest-xdist
 python-dateutil
 python-gitlab
-python-gssapi
 pytz
 pyvo
 PyYAML
@@ -304,7 +303,6 @@ reproject
 requests
 requests-ecp
 requests-gracedb
-requests-gssapi
 requests-kerberos
 requests-mock
 requests-toolbelt
