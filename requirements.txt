@@ -173,7 +173,6 @@ ligo-scald==0.8.0
 ligo-segments==1.4.0
 ligo.skymap==0.5.3
 ligotimegps==2.0.0
-lintegrate==0.1.11
 liquidpy==0.7.2
 llvmlite==0.38.0
 lockfile==0.12.2
