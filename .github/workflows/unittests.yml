@@ -51,10 +51,10 @@ jobs:
     #     path_to_write_report: ./coverage/codecov_report.txt
     #     verbose: true
     - name: Upload coverage
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        flags: unittests
+      uses: codecov/codecov-action@v3
+      # with:
+      #   token: ${{ secrets.CODECOV_TOKEN }}
+        # flags: unittests
     # - name: Upload coverage to Codecov
     #   run: |
     #     # Replace `linux` below with the appropriate OS
