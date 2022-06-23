@@ -38,7 +38,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with PyTest
       run: |
-        pytest --cov=analysis/p_astro_utils.py tests/test_p_astro_utils.py
+        pytest --cov=analysis.p_astro_utils tests/test_p_astro_utils.py
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v3.1.0
     #   with:
