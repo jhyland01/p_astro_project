@@ -248,7 +248,7 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycairo==1.19.1
 PyCBC==2.0.1
-pycm==7.5.4
+pycm
 pycodestyle==2.8.0
 PyCondor==0.5.0
 pycparser==2.21
