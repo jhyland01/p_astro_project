@@ -18,9 +18,8 @@ Using a simple parameterisation from a paper by Lynch et al. (citation needed), 
 To calculate the probability of astrophysical origin (P_astro) we need the true astrophysical event rate.
 This is obtained by integrating over mass and spacetime volume from the power-law plus peak model fitted to GWTC-3 data (figure 10 of citation needed).
 
-## Basic Usage
+## Basic Usage [Contribution guidelines for this project](analysis/README.md)
 
-### Short Instructions
 This notebook will run through the steps to run the analysis for the $P_\text{astro}$ project.
 More detailed notes are in `long_notes.ipynb`.
 
