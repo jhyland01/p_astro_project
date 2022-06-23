@@ -220,7 +220,6 @@ parso==0.8.3
 pastel==0.2.1
 pathspec==0.7.0
 patsy==0.5.2
-pcaspy==0.7.3
 pegasus-wms.api==5.0.1
 pegasus-wms.common==5.0.0
 pep517==0.12.0
