@@ -290,6 +290,7 @@ pytest-timeout
 pytest-xdist
 python-dateutil
 python-gitlab
+python-gssapi
 pytz
 pyvo
 PyYAML
