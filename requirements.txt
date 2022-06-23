@@ -37,7 +37,6 @@ cachy==0.3.0
 cairocffi==1.2.0
 CairoSVG==2.5.2
 cdshealpix==0.6.1
-cdsutils==1.4.1
 celery==5.1.2
 celery-eternal==0.1.1
 celery-singleton==0.3.1
