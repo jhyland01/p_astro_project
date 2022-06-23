@@ -1,4 +1,4 @@
-[![CI](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml/badge.svg)](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml)
+[![CI](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml/badge.svg)](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml) [![codecov](https://codecov.io/gh/jhyland01/p_astro_project/branch/master/graph/badge.svg?token=L4NSGM7TN6)](https://codecov.io/gh/jhyland01/p_astro_project)
 
 # P_astro Project
 
