@@ -167,7 +167,6 @@ kiwisolver==1.4.2
 kombine==0.8.4
 kombu==5.2.4
 lalsuite==7.3
-lark-parser==0.12.0
 ligo-common==1.0.4
 ligo.em-bright==0.1.6
 ligo-followup-advocate==1.1.9
