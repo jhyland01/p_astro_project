@@ -271,7 +271,7 @@ pyomicron==1.1.0
 pyOpenSSL==21.0.0
 pyparsing==3.0.4
 PyQt5==5.12.3
-PyQt5_sip==4.19.18
+PyQt5_sip
 PyQtChart==5.12
 pyqtgraph==0.11.0
 PyQtWebEngine==5.12.1
