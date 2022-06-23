@@ -3,8 +3,4 @@ matplotlib
 gwpopulation
 pandas
 numpy
-csv
 sqlite3
-json
-h5py
-argparse
