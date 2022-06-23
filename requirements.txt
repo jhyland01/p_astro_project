@@ -4,3 +4,4 @@ gwpopulation
 pandas
 numpy
 pytest
+pytest-cov
