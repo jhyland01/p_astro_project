@@ -86,7 +86,6 @@ dqsegdb2==1.0.1
 dttxml==1.1.5
 dynesty==1.0.1
 e==1.4.5
-emcee==0.0.0
 entrypoints==0.4
 ephem==4.1.2
 execnet==1.9.0
