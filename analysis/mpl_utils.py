@@ -1,4 +1,4 @@
-"""This script was produced by the LVK and it used for formating plots."""
+"""This script was produced by the LVK and it used for formatting plots."""
 
 from warnings import warn
 from cycler import cycler
