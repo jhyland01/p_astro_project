@@ -21,7 +21,7 @@ Using a simple parameterisation from a paper by Lynch et al. [3], these SNRs are
 To calculate the probability of astrophysical origin (P<sub>astro</sub>) we need the true astrophysical event rate.
 This is obtained by integrating over mass and spacetime volume from the power-law plus peak model fitted to GWTC-3 data available from [GWOSC](https://www.gw-openscience.org/).
 
-## [Basic Usage](analysis/README.md)
+## Basic Usage
 
 Follow the [link](analysis/README.md) for instructions on running the analysis.
 
