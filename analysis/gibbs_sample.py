@@ -52,7 +52,7 @@ for j in range(0,len(PP_params)):
   # difference in time is 55s for 200 fill_samps or 65s for 5000 fill_samps
   # these fill_samps are there to fill the space for the cdf
   fill_samps = 5000
-  m1s = np.linspace(PP_params[j]['mmin']+0.02,PP_params[j]['mmax'],fill_samps) # small amount added to the minimum masst o ensure we stay within the range
+  m1s = np.linspace(PP_params[j]['mmin']+0.02,PP_params[j]['mmax'],fill_samps) # small amount added to the minimum mass to ensure we stay within the range
   a = np.linspace(0,1,fill_samps)
   cos_tilt = np.linspace(-1,1,fill_samps)
   redsh = np.linspace(0,2.3,fill_samps)
@@ -81,6 +81,7 @@ for j in range(0,len(PP_params)):
       # define a minimum q , based on our mass sample
       q_min = PP_params[j]['mmin']/m1_sample[i]
       qs = np.linspace(q_min,1,fill_samps)
+      # use the sampled m1 and the prob(q)=p_q from the mass model in gwpopulation
       m1s_new = np.full(fill_samps, m1_sample[i])
 
       space_df_q = pd.DataFrame(m1s_new, columns = ['mass_1'])
@@ -99,7 +100,7 @@ for j in range(0,len(PP_params)):
 
       # and the spin ori, this is currently ignoring the effect of the xi term for mixing field and dynamical
       # so we choose a random number between 0 and 1 and compare this to the value of xi_spin
-      # check which channel is determined by above or below xi_spin, if less then procees by field channel
+      # check which channel is determined by above or below xi_spin, if less then proceed by field channel
       channel = np.random.random()
       if channel < PP_params[j]['xi_spin']:
 
