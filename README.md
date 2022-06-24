@@ -23,7 +23,7 @@ This is obtained by integrating over mass and spacetime volume from the power-la
 
 ## [Basic Usage](analysis/README.md)
 
-Follow the link for instructions on running the analysis.
+Follow the [link](analysis/README.md) for instructions on running the analysis.
 
 ## Dependencies
 
