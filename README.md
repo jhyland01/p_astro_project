@@ -8,8 +8,10 @@ Exploring the effect of using the probability of astrophysical origin as a thres
 ## Installation instructions
 
 This project only needs installed as a package if you wish to run tests, the .py files can be run without any installation.
-To install, clone the project and navigate to the root of the project directory.
-Run `pip3 install .` .
+To install, clone the project and navigate to the root of the project directory and run:
+```console
+pip3 install .
+``` 
 
 ## Main Features
 
