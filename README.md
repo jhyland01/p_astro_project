@@ -18,7 +18,7 @@ pip3 install .
 The scripts in this package are built to select a set of hyperposterior samples from the GWTC-3 data release and Gibbs sample posterior samples from this set of hyperposteriors.
 The bilby package is then used to generate signal-to-noise ratios (SNRs) by injecting these event signals into a stationary noise background.
 Using a simple parameterisation from a paper by Lynch et al. [3], these SNRs are converted into False-alarm-rates (FARs).
-To calculate the probability of astrophysical origin ($$P_\mathrm{astro}$$) we need the true astrophysical event rate.
+To calculate the probability of astrophysical origin (P~astro~) we need the true astrophysical event rate.
 This is obtained by integrating over mass and spacetime volume from the power-law plus peak model fitted to GWTC-3 data available from [GWOSC](https://www.gw-openscience.org/).
 
 ## [Basic Usage](analysis/README.md)
