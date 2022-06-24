@@ -40,8 +40,15 @@ Email: j.hyland.2@research.gla.ac.uk
 
 ## Citations
 
-1. GWTC-3 catalog
-2. GWTC-3 Population paper
-3. Lynch et al.
+1. The LIGO Scientific Collaboration, the Virgo Collaboration, the KAGRA Collaboration, R. Abbott,
+T. D. Abbott, F. Acernese, K. Ackley, C. Adams, N. Adhikari, R. X. Adhikari, and et al.,
+“GWTC-3: Compact Binary Coalescences Observed by LIGO and Virgo During the Second Part
+of the Third Observing Run,” arXiv e-prints, p. [arXiv:2111.03606](https://arxiv.org/abs/2111.03606), Nov. 2021.
 
-to be updated
+2. The LIGO Scientific Collaboration, the Virgo Collaboration, the KAGRA Collaboration, R. Abbott,
+T. D. Abbott, F. Acernese, K. Ackley, C. Adams, N. Adhikari, R. X. Adhikari, and et al., “The
+population of merging compact binaries inferred using gravitational waves through GWTC-3,”
+arXiv e-prints, p. [arXiv:2111.03634](https://arxiv.org/abs/2111.03634), Nov. 2021.
+
+3. R. Lynch, M. Coughlin, S. Vitale, C. W. Stubbs, and E. Katsavounidis, “Observational implications
+of lowering the ligo-virgo alert threshold,” The Astrophysical Journal, vol. 861, no. 2, 2018. [arXiv:1803.02880](https://arxiv.org/abs/1803.02880).
