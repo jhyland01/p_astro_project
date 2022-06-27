@@ -5,9 +5,16 @@ import pandas as pd
 
 
 def convert(pdf):
-    """Ensure formatting of the input pdf for use in the cdf functions.
-    :param prob_dist: The probability distribution of interest.
-    :returns: The pdf converted to numpy.
+    """
+    Ensure formatting of the input pdf for use in the cdf functions.
+    Parameters
+    ==========
+    pdf: pandas dataframe
+        The probability distribution of interest.
+    Returns
+    =======
+    pdf: numpy
+        The pdf converted to numpy.
     """
     if isinstance(pdf, (pd.Series, pd.DataFrame)):
         pdf = pdf.to_numpy()
