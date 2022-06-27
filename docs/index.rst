@@ -1,9 +1,9 @@
 Welcome to the documentation for the P_astro Project.
 ==============================================
 
-.. currentmodule:: analysis
+.. currentmodule:: .
 
-.. automodule:: analysis
+.. automodule:: .
     :members:
 
 API:
