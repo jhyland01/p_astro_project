@@ -1,5 +1,6 @@
 [![CI](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml/badge.svg)](https://github.com/jhyland01/p_astro_project/actions/workflows/main.yaml) 
 [![codecov](https://codecov.io/gh/jhyland01/p_astro_project/branch/master/graph/badge.svg?token=L4NSGM7TN6)](https://codecov.io/gh/jhyland01/p_astro_project)
+[![Documentation Status](https://readthedocs.org/projects/p-astro-project/badge/?version=latest)](https://p-astro-project.readthedocs.io/en/latest/?badge=latest)
 
 # P<sub>astro</sub> Project
 
@@ -29,6 +30,10 @@ Follow the [link](analysis/README.md) for instructions on running the analysis.
 
 See `requirements.txt` for a full list of environment packages.
 This does not include the packages required for using the mpl_utils.py which originates from the GWTC-3 data release and required packages in the LVK igwn environments.
+
+## Documentation
+
+Documentation can be found [here](https://p-astro-project.readthedocs.io/en/latest/index.html).
 
 ## Future work
 

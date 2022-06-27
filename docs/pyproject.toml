@@ -1,0 +1,8 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "P_astro project"
+authors = [{name = "Johnathon Hyland", email = "j.hyland.2@research.gla.ac.uk"}]
+dynamic = ["version", "description"]
