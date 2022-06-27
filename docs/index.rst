@@ -6,6 +6,15 @@ Welcome to the documentation for the P_astro Project.
 .. automodule:: P_astro_project
     :members:
 
+Index:
+Contents
+--------
+
+.. toctree::
+
+   usage
+   API
+
 API:
 ----
 
