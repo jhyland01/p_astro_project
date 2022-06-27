@@ -15,7 +15,7 @@ API:
    :caption: API:
    :recursive:
 
-   analysis
+   P_astro_project
    create_database
    generate_SNRs_FARs
    gibbs_sample
