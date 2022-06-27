@@ -11,7 +11,7 @@ To install, clone the project and navigate to the root of the project directory 
 
 .. code-block:: console
 
-   (.venv) $ pip3 install .
+   (.venv) $ pip3 install -e .
 
 Download data
 -------------
