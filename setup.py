@@ -1,3 +1,6 @@
-from setuptools import setup, find_packages
+#!/usr/bin/env python
 
-setup(name="P_astro_project", version='1.0', packages=find_packages())
+import setuptools
+
+if __name__ == "__main__":
+    setuptools.setup()
