@@ -39,9 +39,19 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
+# The master toctree document.
+master_doc = "index"
+
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Configure autoapi -------------------------------------------------------
+autoapi_type = 'python'
+autoapi_dirs = ['../analysis/']
+autoapi_add_toctree_entry = False
+autoapi_options = ['members', 'show-inheritance',
+                   'show-module-summary']
