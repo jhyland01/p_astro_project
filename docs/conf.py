@@ -13,11 +13,16 @@ version = '0.1.0'
 
 extensions = [
     'sphinx.ext.duration',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.mathjax",
+    "numpydoc",
+    "nbsphinx",
     'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    "sphinx.ext.viewcode",
 ]
+autosummary_generate = True
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
