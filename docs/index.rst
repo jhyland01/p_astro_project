@@ -13,7 +13,6 @@ P_astro Project
 
 
 .. toctree::
-   :maxdepth: 1
    :caption: Contents:
 
    usage

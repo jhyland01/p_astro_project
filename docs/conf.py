@@ -24,6 +24,7 @@ extensions = [
     "sphinx.ext.autodoc",
     'numpydoc',
     'nbsphinx',
+    'autoapi.extension',
     "sphinx.ext.mathjax",
     'sphinx.ext.doctest',
     'sphinx.ext.autosummary',
