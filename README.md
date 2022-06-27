@@ -31,6 +31,10 @@ Follow the [link](analysis/README.md) for instructions on running the analysis.
 See `requirements.txt` for a full list of environment packages.
 This does not include the packages required for using the mpl_utils.py which originates from the GWTC-3 data release and required packages in the LVK igwn environments.
 
+## Documentation
+
+Documentation can be found [here](https://p-astro-project.readthedocs.io/en/latest/index.html).
+
 ## Future work
 
 Predicted detection rates for future detectors (Advanced LIGO +/#, Einstein Telescope etc.)
