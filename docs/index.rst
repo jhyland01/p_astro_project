@@ -5,20 +5,14 @@ This project explores the effect of using the probability of astrophysical origi
 .. currentmodule:: P_astro_project
 
 .. automodule:: P_astro_project
-    :members:
-    :imported-members:
+   :members:
+   :undoc-members:
 
-API:
-----
 
-.. autosummary::
-   :toctree: _autosummary
-   :template: custom-module-template.rst
-   :caption: API:
-   :recursive:
-
-   create_database
-   generate_SNRs_FARs
-   gibbs_sample
-   p_astro_utils
-   select_hyperposterior
+Contents:
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+   usage
+   API reference </autoapi/P_astro_project/index>
+   API
