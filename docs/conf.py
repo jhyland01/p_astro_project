@@ -9,15 +9,28 @@ author = 'Johnathon Hyland'
 release = '0.1'
 version = '0.1.0'
 
+import os
+import sys
+
+
+#import P_astro_project
+
+sys.path.insert(0, os.path.abspath("../"))
+
 # -- General configuration
 
 extensions = [
     'sphinx.ext.duration',
+    "sphinx.ext.autodoc",
+    'numpydoc',
+    'nbsphinx',
+    "sphinx.ext.mathjax",
     'sphinx.ext.doctest',
-    'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
+    "sphinx.ext.viewcode"
 ]
+autosummary_generate = True
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
@@ -27,9 +40,19 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
+# The master toctree document.
+master_doc = "index"
+
 # -- Options for HTML output
 
 html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Configure autoapi -------------------------------------------------------
+autoapi_type = 'python'
+autoapi_dirs = ['../P_astro_project/']
+autoapi_add_toctree_entry = False
+autoapi_options = ['members', 'show-inheritance',
+                   'show-module-summary']

@@ -14,4 +14,4 @@ python:
    install:
    - method: pip3
      path: .
-   - requirements: requirements.txt
+   - requirements: docs/requirements.txt

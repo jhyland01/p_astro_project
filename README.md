@@ -33,7 +33,7 @@ This does not include the packages required for using the mpl_utils.py which ori
 
 ## Documentation
 
-Documentation can be found [here](https://p-astro-project.readthedocs.io/en/latest/index.html).
+Documentation can be found at [p-astro-project.readthedocs.io](https://p-astro-project.readthedocs.io/en/latest/index.html).
 
 ## Future work
 

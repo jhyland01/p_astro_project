@@ -1,20 +1,3 @@
-Welcome to the documentation for the P_astro Project.
-=====================================================
-
-.. currentmodule:: P_astro_project
-
-.. automodule:: P_astro_project
-    :members:
-
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   API
-
 API:
 ----
 
