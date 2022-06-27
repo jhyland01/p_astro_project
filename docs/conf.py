@@ -22,11 +22,12 @@ sys.path.insert(0, os.path.abspath("../"))
 extensions = [
     'sphinx.ext.duration',
     "sphinx.ext.autodoc",
+    'numpydoc',
     "sphinx.ext.mathjax",
     'sphinx.ext.doctest',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
-    "sphinx.ext.viewcode",
+    "sphinx.ext.viewcode"
 ]
 autosummary_generate = True
 
@@ -50,7 +51,7 @@ epub_show_urls = 'footnote'
 
 # -- Configure autoapi -------------------------------------------------------
 autoapi_type = 'python'
-autoapi_dirs = ['../analysis/']
+autoapi_dirs = ['../P_astro_project/']
 autoapi_add_toctree_entry = False
 autoapi_options = ['members', 'show-inheritance',
                    'show-module-summary']

@@ -9,12 +9,12 @@ def convert(pdf):
     Ensure formatting of the input pdf for use in the cdf functions.
 
     Parameters
-    ==========
+    ----------
     pdf: pandas dataframe
         The probability distribution of interest.
     
     Returns
-    =======
+    -------
     pdf: ndarray
         The pdf converted to numpy.
     """
@@ -27,12 +27,12 @@ def cdf(pdf):
     Compute the normalised CDF of the probability distribution x.
 
     Parameters
-    ==========    
+    ----------    
     pdf: ndarray
         The probability distribution of interest.
     
     Returns
-    =======
+    -------
     cdf: ndarray
         The normalised cumulative distribution of the input probability distribution.
     """
@@ -48,7 +48,7 @@ def cdf_samp(pdf, param):
     Create and normalise the cdf and return a sample from it.
     
     Parameters
-    ==========
+    ----------
     pdf: ndarray
         The probability distribution of interest.
 
@@ -56,7 +56,7 @@ def cdf_samp(pdf, param):
         The range of values the parameter being sampled can take.
 
     Returns
-    =======
+    -------
     sample: float or complex (corresponding to fp) or ndarray
         Random sample from the cdf.
     """
@@ -81,7 +81,7 @@ def chi_eff(a1, a2, cos_theta1, cos_theta2, q):
         Cosine of the tilt angles for bodies 1 and 2.
 
     q: float
-        Mass ratio $\frac{m_2}{m_1}$.
+        Mass ratio (:math: `\frac{m_2}{m_1}`).
 
     Returns
     -------
@@ -106,7 +106,7 @@ def chi_p(a1, a2, sin_theta1, sin_theta2, q):
         Sine of the tilt angles for bodies 1 and 2.
 
     q: float
-        Mass ratio $\frac{m_2}{m_1}$.
+        Mass ratio (:math: `\frac{m_2}{m_1}`).
 
     Returns
     -------
