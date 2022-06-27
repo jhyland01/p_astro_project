@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from p_astro_utils import cdf_samp, chi_eff, chi_p
 from bilby.hyper.model import Model
-from analysis import select_hyperposterior
+from P_astro_project import select_hyperposterior
 import argparse
 
 parser = argparse.ArgumentParser()
