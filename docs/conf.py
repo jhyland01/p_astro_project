@@ -9,6 +9,13 @@ author = 'Johnathon Hyland'
 release = '0.1'
 version = '0.1.0'
 
+import os
+import sys
+
+import P_astro_project
+
+sys.path.insert(0, os.path.abspath("../"))
+
 # -- General configuration
 
 extensions = [
