@@ -13,7 +13,7 @@ import os
 import sys
 
 
-import P_astro_project
+import analysis
 
 sys.path.insert(0, os.path.abspath("../"))
 
