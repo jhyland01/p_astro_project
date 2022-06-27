@@ -23,6 +23,7 @@ extensions = [
     'sphinx.ext.duration',
     "sphinx.ext.autodoc",
     "sphinx.ext.mathjax",
+    "numpydoc",
     'sphinx.ext.doctest',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
