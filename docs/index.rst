@@ -6,6 +6,10 @@ This project explores the effect of using the probability of astrophysical origi
 
 .. automodule:: P_astro_project
     :members:
+    :imported-members:
+
+.. automodule:: P_astro_project.p_astro_utils
+    :members:
 
 API:
 ----
