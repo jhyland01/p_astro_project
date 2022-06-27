@@ -21,11 +21,3 @@ API:
    gibbs_sample
    p_astro_utils
    select_hyperposterior
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   API
