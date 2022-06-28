@@ -51,13 +51,11 @@ jobs:
     #     verbose: true
     - name: Upload coverage
       uses: codecov/codecov-action@v3
-      # with:
-      #   token: ${{ secrets.CODECOV_TOKEN }}
-        # flags: unittests
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        flags: unittests
     # - name: Upload coverage to Codecov
     #   run: |
-    #     # Replace `linux` below with the appropriate OS
-    #     # Options are `alpine`, `linux`, `macos`, `windows`
     #     curl -Os https://uploader.codecov.io/latest/macos/codecov
     #     chmod +x codecov
     #     ./codecov -t ${CODECOV_TOKEN}
