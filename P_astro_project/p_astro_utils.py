@@ -128,11 +128,11 @@ class spin():
 
 # write the FAR conversion as a function
 def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
-    """
+    r"""
     Calculate the FAR using the parameterisations from the Lynch at al paper https://arxiv.org/abs/1803.02880.
 
     .. math::
-        \mathrm{FAR} = \mathrm{FAR}_8 \times \exp{[-\frac{\rho - 8}{\alpha}]}
+        \mathrm{FAR} = \mathrm{FAR}_8 \times \exp{\left[-\frac{\rho - 8}{\alpha}\right]}
     
     Parameters
     ----------
