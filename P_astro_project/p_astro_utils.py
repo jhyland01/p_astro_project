@@ -63,63 +63,76 @@ def cdf_samp(pdf, param):
     CDF = cdf(pdf)
     return np.interp(np.random.random(), CDF, param)
 
+class spin():
+    """A class for holding the spin calculation functions."""
+    def __init__(self, a1, a2, tilt_1, tilt_2, q):
+        self.a1 = a1
+        self.a2 = a2
+        self.tilt_1 = tilt_1
+        self.tilt_2 = tilt_2
+        self.q = q
 
-# create functions converting spins
-def chi_eff(a1, a2, cos_theta1, cos_theta2, q):
-    r"""
-    Compute the effective spin parameter, which is that aligned with the orbital angular momentum.
+    # create functions converting spins
+    def chi_eff(self, a1, a2, tilt_1, tilt_2, q):
+        r"""
+        Compute the effective spin parameter, which is that aligned with the orbital angular momentum.
 
-    .. math::
-        \chi_{eff} = \frac{a_{1}\cos{\theta_{1}} + q a_{2} \cos{\theta_{2}}}{1+q}
+        .. math::
+            \chi_{eff} = \frac{a_{1}\cos{\theta_{1}} + q a_{2} \cos{\theta_{2}}}{1+q}
 
-    Parameters
-    ----------
-    a1, a2: float
-        Spin magnitudes.
+        Parameters
+        ----------
+        a1, a2: float
+            Spin magnitudes.
 
-    cos_theta1, cos_theta2: float
-        Cosine of the tilt angles for bodies 1 and 2.
+        tilt_1, tilt_2: float
+            The tilt angles for bodies 1 and 2.
 
-    q: float
-        Mass ratio (:math: `\frac{m_2}{m_1}`).
+        q: float
+            Mass ratio (:math:`\frac{m_2}{m_1}`).
 
-    Returns
-    -------
-    chi_eff: float
-        Effective spin parameter.
-    """
-    return (a1*cos_theta1 + q*a2*cos_theta2)/(1+q)
+        Returns
+        -------
+        chi_eff: float
+            Effective spin parameter.
+        """
+        cos_theta1, cos_theta2 = np.cosine(tilt_1), np.cosine(tilt_2)
+        return (a1*cos_theta1 + q*a2*cos_theta2)/(1+q)
 
-def chi_p(a1, a2, sin_theta1, sin_theta2, q):
-    r"""
-    Compute the effective spin precession parameter, which is that projected into the plane of the orbit.
+    def chi_p(self, a1, a2, tilt_1, tilt_2, q):
+        r"""
+        Compute the effective spin precession parameter, which is that projected into the plane of the orbit.
 
-    .. math::
-        \chi_{p} = max(a_{1}\sin{\theta_{1}}, \frac{4q + 3}{4+3q}qa_{2}\sin{\theta_2})
+        .. math::
+            \chi_{p} = max(a_{1}\sin{\theta_{1}}, \frac{4q + 3}{4+3q}qa_{2}\sin{\theta_2})
 
-    Parameters
-    ----------
-    a1, a2: float
-        Spin magnitudes.
+        Parameters
+        ----------
+        a1, a2: float
+            Spin magnitudes.
 
-    \sin{theta_1}, sin_theta2: float
-        Sine of the tilt angles for bodies 1 and 2.
+        tilt_1, tilt_2: float
+            The tilt angles for bodies 1 and 2.
 
-    q: float
-        Mass ratio (:math: `\frac{m_2}{m_1}`).
+        q: float
+            Mass ratio (:math:`\frac{m_2}{m_1}`).
 
-    Returns
-    -------
-    chi_p: float
-        Effective spin precession parameter.
-    """
-    return np.maximum(a1*sin_theta1, (4*q+3)*q*a2*sin_theta2/(4+3*q))
+        Returns
+        -------
+        chi_p: float
+            Effective spin precession parameter.
+        """
+        sin_theta1, sin_theta2 = np.sine(tilt_1), np.sine(tilt_2)
+        return np.maximum(a1*sin_theta1, (4*q+3)*q*a2*sin_theta2/(4+3*q))
 
 
 # write the FAR conversion as a function
 def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
-    """
+    r"""
     Calculate the FAR using the parameterisations from the Lynch at al paper https://arxiv.org/abs/1803.02880.
+
+    .. math::
+        \mathrm{FAR} = \mathrm{FAR}_8 \times \exp{\left[-\frac{\rho - 8}{\alpha}\right]}
     
     Parameters
     ----------
@@ -128,7 +141,7 @@ def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
     FAR8: float
         The approximate false alarm rate for an SNR=8.
     alpha: float
-        The steepness of the exponential function (:math: `\alpha`)
+        The steepness of the exponential function (:math:`alpha`)
 
     Returns
     -------
