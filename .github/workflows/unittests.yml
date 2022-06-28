@@ -37,7 +37,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with PyTest
       run: |
-        pytest --cov-report=xml
+        pytest --cov-report=coverage.xml
     # - name: Upload coverage to Codecov
     #   uses: codecov/codecov-action@v3.1.0
     #   with:
@@ -53,6 +53,7 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        # files: 
         flags: unittests
     # - name: Upload coverage to Codecov
     #   run: |
