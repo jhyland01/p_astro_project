@@ -16,5 +16,4 @@ P_astro Project
    :caption: Contents:
 
    usage
-   API
    API reference </autoapi/P_astro_project/index>
