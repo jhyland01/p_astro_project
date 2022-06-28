@@ -115,7 +115,7 @@ class spin():
             The tilt angles for bodies 1 and 2.
 
         q: float
-            Mass ratio (:math: `\frac{m_2}{m_1}`).
+            Mass ratio (:math: \frac{m_2}{m_1}).
 
         Returns
         -------
@@ -130,6 +130,9 @@ class spin():
 def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
     """
     Calculate the FAR using the parameterisations from the Lynch at al paper https://arxiv.org/abs/1803.02880.
+
+    .. math::
+            \mathrm{FAR} = \mathrm{FAR}_8 \times \exp{[-\frac{\rho - 8}{\alpha}]}
     
     Parameters
     ----------
@@ -138,7 +141,7 @@ def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
     FAR8: float
         The approximate false alarm rate for an SNR=8.
     alpha: float
-        The steepness of the exponential function (:math: `\alpha`)
+        The steepness of the exponential function (:math: `alpha`)
 
     Returns
     -------

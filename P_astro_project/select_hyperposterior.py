@@ -6,9 +6,18 @@ import numpy as np
 import gwpopulation as gwpop
 
 def select_hyper(nsets=20):
-    """Select a user-defined number of sets of hyperposterior samples from which to obtain posterior samples.
-    :param nsets: Number of hyperposteriors sets to be randomly selected.
-    :returns: A list of dictionaries, each a set of hyperposterior samples.
+    """
+    Select a user-defined number of sets of hyperposterior samples from which to obtain posterior samples.
+
+    Parameters
+    ----------
+    nsets: float
+        Number of hyperposteriors sets to be randomly selected.
+
+    Returns
+    -------
+    PP_params: [dict]
+        A list of dictionaries, each a set of hyperposterior samples.
     """
     # read in all the hyperposterior samples
     PP_path = '../../GWTC-3-population-data/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json'
