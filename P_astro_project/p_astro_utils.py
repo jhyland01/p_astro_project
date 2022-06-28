@@ -141,7 +141,7 @@ def SNR_to_FAR(snr, FAR8=5500, alpha=0.18):
     FAR8: float
         The approximate false alarm rate for an SNR=8.
     alpha: float
-        The steepness of the exponential function (:math:`alpha`)
+        The steepness of the exponential function (:math:`\alpha`)
 
     Returns
     -------
