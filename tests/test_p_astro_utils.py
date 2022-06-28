@@ -23,7 +23,7 @@ def test_cdf_norm(test, expected):
 #     ])
 # def test_cdf_inputs(test, expected):
 #     """Test the cdf function is takes different inputs."""
-#     from analysis.p_astro_utils import cdf
+#     from P_astro_project.p_astro_utils import cdf
 #     npt.assert_array_equal((cdf(test)[0],cdf(test)[-1]), expected)
 
 @pytest.mark.parametrize(
