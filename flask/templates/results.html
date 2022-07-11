@@ -5,6 +5,9 @@ Analysis Results
 {% block content %}
 <div class = "container">
     <h1 class = "title"> Results :</h1>
-    <h2 class = "sub"> Analysis running for {{hyp}} sets of hyperparameters...</h2>
+    <h2 class = "sub"> Analysis running for {{hyp}} sets of hyperparameters.</h2>
 </div>
+The below table is an example of one set of chosen hyperparameters.
+{{table|safe}}
+
 {% endblock %}

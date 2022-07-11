@@ -1,5 +1,6 @@
 from flask import *
 from P_astro_project import select_hyperposterior
+import pandas as pd
 
 app = Flask(__name__)
 
@@ -11,9 +12,11 @@ def home():
 def search():
     data = request.args
     keyword = data["Nhyp"]
-    print(type(keyword))
-    value = test.test_fn(int(keyword)) # output here is the string "you input:"
-    return render_template("results.html", hyp=value)
+    value = int(keyword) # output here is the string "you input:"
+    PP_params = select_hyperposterior.select_hyper(value)
+    df = pd.DataFrame([PP_params[0]])
+    PP_params_html = pd.DataFrame.to_html(df, classes="table")
+    return render_template("results.html", hyp=value, table=PP_params_html)
 
 # New functions
 @app.route("/about/")
