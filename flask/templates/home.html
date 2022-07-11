@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<form action = "/run" method = "GET">
+    <label> Define how many sets of hyperparameters you would like to sample: </label> <br/>
+      <div class="field">
+  <div class="control">
+    <input class="input is-primary" type="number" placeholder="No. of sets" name = "Nhyp">
+  </div>
+</div>
+    <button class = "btn main-btn" type = "submit">Run</button>
+  </form>
+<p>Define how many samples you would like to obtain from each set of hyperparameters:</p>
+<input type="text" name="Nsamps"/>
+<p>Run the select_hyperparameters.py file:</p>
+<input type="submit" name="submit_button" value="Sample Hyperposteriors">
+<p>Run the whole analysis:</p>
+<input type="submit" name="submit_button" value="Run Analysis">
+<p>Once the analysis completes something will appear below...</p>
+{% endblock %}
