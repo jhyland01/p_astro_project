@@ -73,7 +73,7 @@ class spin():
         self.q = q
 
     # create functions converting spins
-    def chi_eff(self, a1, a2, tilt_1, tilt_2, q):
+    def chi_eff(self):
         r"""
         Compute the effective spin parameter, which is that aligned with the orbital angular momentum.
 
@@ -96,10 +96,10 @@ class spin():
         chi_eff: float
             Effective spin parameter.
         """
-        cos_theta1, cos_theta2 = np.cosine(tilt_1), np.cosine(tilt_2)
-        return (a1*cos_theta1 + q*a2*cos_theta2)/(1+q)
+        cos_theta1, cos_theta2 = np.cos(self.tilt_1), np.cos(self.tilt_2)
+        return (self.a1*cos_theta1 + self.q*self.a2*cos_theta2)/(1+self.q)
 
-    def chi_p(self, a1, a2, tilt_1, tilt_2, q):
+    def chi_p(self):
         r"""
         Compute the effective spin precession parameter, which is that projected into the plane of the orbit.
 
@@ -122,8 +122,8 @@ class spin():
         chi_p: float
             Effective spin precession parameter.
         """
-        sin_theta1, sin_theta2 = np.sine(tilt_1), np.sine(tilt_2)
-        return np.maximum(a1*sin_theta1, (4*q+3)*q*a2*sin_theta2/(4+3*q))
+        sin_theta1, sin_theta2 = np.sin(self.tilt_1), np.sin(self.tilt_2)
+        return np.maximum(self.a1*sin_theta1, (4*self.q+3)*self.q*self.a2*sin_theta2/(4+3*self.q))
 
 
 # write the FAR conversion as a function

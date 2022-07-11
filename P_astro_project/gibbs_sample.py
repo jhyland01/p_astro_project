@@ -3,7 +3,8 @@
 import gwpopulation as gwpop
 import numpy as np
 import pandas as pd
-from p_astro_utils import cdf_samp, chi_eff, chi_p
+import p_astro_utils
+from p_astro_utils import cdf_samp
 from bilby.hyper.model import Model
 from P_astro_project import select_hyperposterior
 import argparse
@@ -146,8 +147,9 @@ samples = samples.assign(tilt_1 = np.arccos(samples['cos_tilt_1']))
 samples = samples.assign(tilt_2 = np.arccos(samples['cos_tilt_2']))
 samples = samples.assign(sin_tilt_1 = np.sin(samples['tilt_1']))
 samples = samples.assign(sin_tilt_2 = np.sin(samples['tilt_2']))
-samples = samples.assign(chi_eff = chi_eff(samples['a_1'], samples['a_2'],samples['tilt_1'],samples['tilt_2'],samples['mass_ratio']))
-samples = samples.assign(chi_p = chi_p(samples['a_1'], samples['a_2'],samples['tilt_1'],samples['tilt_2'],samples['mass_ratio']))
+spins = p_astro_utils.spin(a1=samples['a_1'], a2=samples['a_2'],tilt_1=samples['tilt_1'],tilt_2=samples['tilt_2'],q=samples['mass_ratio'])
+samples = samples.assign(chi_eff = spins.chi_eff())
+samples = samples.assign(chi_p = spins.chi_p())
 samples = samples.assign(spin1z = samples['a_1']*samples['cos_tilt_1'])
 samples = samples.assign(spin2z = samples['a_2']*samples['cos_tilt_2'])
 samples = samples.assign(spin1x = samples['a_1']*samples['sin_tilt_1'])
