@@ -7,9 +7,16 @@ Analysis Results
     <h1 class = "title"> Results :</h1>
     <h2 class = "sub"> Sampling run for {{hyp}} sets of hyperparameters.</h2>
 </div>
-The below table is an example of one set of chosen hyperparameters.
+The below table contains each randomly selected set of hyperparameters.
 <div style="overflow-x:scroll">
-{{table|safe}}
+    <div id='table' class='chart'”></div>
+    <div>
+    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+    <script type='text/javascript'>
+      var graphs = {{table | safe}};
+      Plotly.plot('table',graphs,{});
+    </script>
+    </div>
 </div>
 Below are some plots produced in Plotly.
 <div id='chart' class='chart'”></div>
