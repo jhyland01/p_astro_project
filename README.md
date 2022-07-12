@@ -26,6 +26,12 @@ This is obtained by integrating over mass and spacetime volume from the power-la
 
 Follow the [link](analysis/README.md) for instructions on running the analysis.
 
+Ongoing work: Web interface under development with Flask.
+
+![Image](/flask/home_page.png?raw=true)
+
+More screenshots are available [here](flask/README.md).
+
 ## Dependencies
 
 See `requirements.txt` for a full list of environment packages.
