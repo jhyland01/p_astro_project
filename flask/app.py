@@ -6,6 +6,7 @@ import plotly
 import plotly.express as px
 import plotly.graph_objects as go
 import subprocess
+from pandas_profiling import ProfileReport
 
 app = Flask(__name__)
 
@@ -38,7 +39,15 @@ def search():
 
     return render_template("results.html", hyp=value, table=tableJSON, graphJSON=graphJSON) # include all in render
 
+
 # New functions
+@app.route("/report/")
+def report():
+    samples = pd.read_csv('../outputs/params_for_SNR.csv')
+    profile = ProfileReport(samples, title="Pandas Profiling Report")
+    profile.to_file("profiling_report.html")
+    return render_template("profiling_report.html")
+
 @app.route("/about/")
 def about():
     return render_template("about.html")

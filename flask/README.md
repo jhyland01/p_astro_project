@@ -6,4 +6,6 @@ Soon you will be able to install the package and all dependencies in a venv and 
 
 More Screenshots:
 
+![Image](profiling.png?raw=true)
+
 ![Image](results.png?raw=true)
