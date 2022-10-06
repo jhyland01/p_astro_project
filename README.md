@@ -24,7 +24,7 @@ This is obtained by integrating over mass and spacetime volume from the power-la
 
 ## Basic Usage
 
-Follow the [link](analysis/README.md) for instructions on running the analysis.
+Follow the [link](P_astro_project/README.md) for instructions on running the analysis.
 
 Ongoing work: Web interface under development with Flask.
 
