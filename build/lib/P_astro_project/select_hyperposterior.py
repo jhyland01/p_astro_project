@@ -20,7 +20,7 @@ def select_hyper(nsets=20):
         A list of dictionaries, each a set of hyperposterior samples.
     """
     # read in all the hyperposterior samples
-    PP_path = '../GWTC-3-population-data/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json'
+    PP_path = '../../GWTC-3-population-data/analyses/PowerLawPeak/o1o2o3_mass_c_iid_mag_iid_tilt_powerlaw_redshift_result.json'
     PP_result = read_in_result(PP_path)
     PP_hyperposterior_samples = PP_result.posterior.copy()
 
